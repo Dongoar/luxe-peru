@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE PERFUMES | Alta Perfumería Árabe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#fafaf9] font-['Inter'] text-slate-900 leading-relaxed">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-stone-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <span class="text-2xl font-['Cormorant_Garamond'] tracking-[0.3em] font-bold cursor-pointer" onclick="filtrarProductos('todos')">LUXE</span>
+            <div class="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.2em] font-semibold">
+                <a href="#catalogo" onclick="filtrarProductos('todos')" class="nav-link">Colección</a>
+                <a href="#catalogo" onclick="filtrarProductos('masVendidos')" class="nav-link text-amber-700">Más Vendidos</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative h-[90vh] flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-stone-200/30 -z-10"></div>
+        <div class="text-center z-20 px-6 max-w-3xl">
+            <span class="text-[10px] uppercase tracking-[0.5em] text-stone-400 mb-4 block italic">Exclusividad en cada gota</span>
+            <h1 class="text-6xl md:text-8xl font-['Cormorant_Garamond'] italic mb-8 leading-tight text-slate-800">El arte de la esencia.</h1>
+            <p class="text-stone-500 font-light text-sm md:text-base mb-10 tracking-wide">
+                Selección curada de la mejor perfumería árabe. <br> Envíos a todo el Perú.
+            </p>
+            <a href="#catalogo" class="inline-block border border-slate-900 px-12 py-5 text-[10px] uppercase tracking-[0.3em] hover:bg-slate-900 hover:text-white transition-all duration-700">Explorar Catálogo</a>
+        </div>
+    </section>
+
+    <section id="catalogo" class="max-w-7xl mx-auto px-6 py-32">
+        <div class="flex flex-col md:flex-row justify-between items-center mb-20 gap-8 border-b border-stone-100 pb-12">
+            <div class="text-center md:text-left">
+                <span class="text-amber-700 text-[10px] uppercase tracking-[0.3em] font-bold">Catálogo 2026</span>
+                <h2 class="text-5xl font-['Cormorant_Garamond'] mt-2 text-slate-800 font-bold italic">Nuestras Piezas</h2>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-6 md:gap-12">
+                <button onclick="filtrarProductos('todos')" class="filter-btn active">Todos</button>
+                <button onclick="filtrarProductos('masVendidos')" class="filter-btn">✨ Destacados</button>
+                <button onclick="filtrarProductos('LATTAFA')" class="filter-btn">Lattafa</button>
+                <button onclick="filtrarProductos('AFNAN')" class="filter-btn">Afnan</button>
+            </div>
+        </div>
+        
+        <div id="grid-productos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
+            </div>
+    </section>
+
+    <footer id="contacto" class="bg-white py-20 border-t border-stone-100">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h4 class="font-['Cormorant_Garamond'] text-3xl mb-4 italic">¿Deseas una asesoría personalizada?</h4>
+            <p class="text-stone-400 text-sm mb-8 font-light italic">Escríbenos directamente para ayudarte a elegir tu aroma ideal.</p>
+            <a href="https://wa.me/51974238635" class="text-xs uppercase tracking-widest font-bold border-b border-slate-900 pb-2 hover:text-amber-700 transition-colors">WhatsApp: +51 974 238 635</a>
+            <div class="mt-16 text-[9px] text-stone-300 uppercase tracking-widest">© 2026 Luxe Perfumery Lima</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
